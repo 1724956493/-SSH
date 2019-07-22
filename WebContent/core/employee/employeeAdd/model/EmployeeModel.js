@@ -1,0 +1,38 @@
+/*
+ * 人员信息实体类
+ */
+ Ext.define("core.employee.employeeAdd.model.EmployeeModel",{
+	 extend : 'Ext.data.Model',
+	 fields : ['employeeuuid',
+	           'psnname',
+	           'sex',
+	           'health',
+	           'status',
+	           'birthdate',	          
+	           'id',
+	           'province',
+	           'city',
+	           'country',
+	           'addr', 
+	           'mobile',
+	           'createtime',
+	           'job',
+	           'dept',
+	           'usedept',
+	           'teamname',
+	           'applytime',
+	           'checktime',
+	           'creator',
+	           'bankname',
+	           'bankcode',	           
+	           'inscompany',
+	           'inscode',
+	           'insbegindate',
+	           'insenddate',
+	           'injuryinscode',	           
+	           'dispatchcode',
+	           'dispatchtime',
+	           'feedbacktime',
+	           'yktcode',
+	           'pkCorp']
+ });

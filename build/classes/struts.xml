@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<constant name="struts.ongl.allowStaticMethodAccess" value="true"></constant>
+	<constant name="struts.multipart.saveDir" value="/tmp" />
+	<constant name="struts.multipart.maxSize" value="5242880000" />
+	<constant name="struts.multipart.parser" value="jakarta" />
+
+
+	<package name="corp" extends="struts-default" namespace="/corp">
+		<action name="corp_*" method="{1}"
+			class="com.nts.teststruts.struts.action.CorpAction">
+			<result name="success">/corp_add_success.jsp</result>
+		</action>
+	</package>
+
+
+
+	<package name="alter" extends="struts-default" namespace="/alter">
+		<action name="alter_*" method="{1}"
+			class="com.nts.teststruts.struts.action.AlterAction">
+			<result>/corp_add_success.jsp</result>
+		</action>
+	</package>
+
+	<package name="user" extends="struts-default" namespace="/">
+		<action name="user_*" method="{1}"
+			class="com.nts.teststruts.struts.action.UserAction">
+			<result name="success">/index.jsp</result>
+			<result name="error">/biaoqian.jsp</result>
+		</action>
+	</package>
+
+	<package name="insert" extends="struts-default" namespace="/insert">
+		<interceptors>
+			<interceptor name="authority"
+				class="com.nts.teststruts.interceptor.UserAuthorityInterceptor" />
+			<interceptor-stack name="systemInterceptorStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authority" />
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- <default-interceptor-ref name="systemInterceptorStack"></default-interceptor-ref> -->
+
+		<action name="user_*" method="{1}"
+			class="com.nts.teststruts.struts.action.UserAction">
+		</action>
+		<action name="equipck_*" method="{1}"
+			class="com.nts.teststruts.struts.action.AdEquipckAction">
+		</action>
+		<action name="equipreck_*" method="{1}"
+			class="com.nts.teststruts.struts.action.AdEquipreckAction">
+		</action>
+		<action name="collection_*" method="{1}"
+			class="com.nts.teststruts.struts.action.CollectionAction">
+		</action>
+		<action name="employee_*" method="{1}"
+			class="com.nts.teststruts.struts.action.EmployeeAction">
+		</action>
+		<action name="adcarinfo_*" method="{1}"
+			class="com.nts.teststruts.struts.action.AdCarinfoAction">
+		</action>
+	</package>
+
+	<package name="json" extends="json-default" namespace="/json">
+		<interceptors>
+			<interceptor name="authority"
+				class="com.nts.teststruts.interceptor.UserAuthorityInterceptor" />
+
+			<interceptor-stack name="systemInterceptorStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authority" />
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- <default-interceptor-ref name="systemInterceptorStack"></default-interceptor-ref> -->
+
+		<action name="user_*" method="{1}"
+			class="com.nts.teststruts.struts.action.UserAction">
+			<result type="json"></result>
+		</action>
+		<action name="pamequip_*" method="{1}"
+			class="com.nts.teststruts.struts.action.PamEquipAction">
+			<result type="json"></result>
+		</action>
+		<action name="equipck_*" method="{1}"
+			class="com.nts.teststruts.struts.action.AdEquipckAction">
+			<result type="json"></result>
+		</action>
+		<action name="collection_*" method="{1}"
+			class="com.nts.teststruts.struts.action.CollectionAction">
+			<result type="json"></result>
+		</action>
+		<action name="yktserver_*" method="{1}"
+			class="com.nts.teststruts.struts.action.YktServerAction">
+			<result type="json"></result>
+		</action>
+		<action name="employee_*" method="{1}"
+			class="com.nts.teststruts.struts.action.EmployeeAction">
+			<result type="json"></result>
+		</action>
+		<action name="corp_*" method="{1}"
+			class="com.nts.teststruts.struts.action.CorpAction">
+			<result type="json"></result>
+		</action>
+		<action name="job_*" method="{1}"
+			class="com.nts.teststruts.struts.action.JobAction">
+			<result type="json"></result>
+		</action>
+		<action name="adpsndocrp_*" method="{1}"
+			class="com.nts.teststruts.struts.action.AdPsndocRPAction">
+			<result type="json"></result>
+		</action>
+		<action name="adwztype_*" method="{1}"
+			class="com.nts.teststruts.struts.action.AdWztypeAction">
+			<result type="json"></result>
+		</action>
+		<action name="bdpsndoc_*" method="{1}"
+			class="com.nts.teststruts.struts.action.BdPsndocAction">
+			<result type="json"></result>
+		</action>
+		<action name="adpsntype_*" method="{1}"
+			class="com.nts.teststruts.struts.action.AdPsntypeAction">
+			<result type="json"></result>
+		</action>
+		<action name="adcarinfo_*" method="{1}"
+			class="com.nts.teststruts.struts.action.AdCarinfoAction">
+			<result type="json"></result>
+		</action>
+		<action name="adqualitybill_*" method="{1}"
+			class="com.nts.teststruts.struts.action.AdQualityBillAction">
+			<result type="json"></result>
+		</action>
+		<action name="upload_*" method="{1}"
+			class="com.nts.teststruts.struts.action.UploadAction">
+			<result type="json"></result>
+		</action>
+		<action name="resource_*" method="{1}"
+			class="com.nts.teststruts.struts.action.ResourceAction">
+			<result type="json"></result>
+		</action>
+		<action name="dinguser_*" method="{1}"
+			class="com.nts.teststruts.struts.action.DingUserAction">
+			<result type="json"></result>
+		</action>
+		<action name="querybonuse_*" method="{1}"
+			class="com.nts.teststruts.struts.action.QueryBonuseAction">
+			<result type="json"></result>
+		</action>
+		<action name="mis_*" method="{1}"
+			class="com.nts.teststruts.struts.action.MagInforSysAction">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

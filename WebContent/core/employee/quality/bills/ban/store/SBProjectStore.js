@@ -1,0 +1,22 @@
+ Ext.define("core.employee.quality.bills.ban.store.SBProjectStore",{
+ 	extend:'Ext.data.Store',
+ 	alias: 'widget.SBProjectStore',
+ 	fields:['code','typename'],
+ 	data:[{"code":"1","typename":"新区-钢加内外场"},
+ 	{"code":"2","typename":"新区-分段内外场"},
+ 	{"code":"3","typename":"新区-钢板场"},
+	{"code":"4","typename":"新区-管加内外场"},
+	{"code":"5","typename":"新区-3#坞及总组场地"},
+	{"code":"6","typename":"新区-3#码头"},
+	{"code":"7","typename":"东区-钢加内外场"},
+	{"code":"8","typename":"东区-2#码头"},
+	{"code":"9","typename":"东区-铁舾内外场"},
+	{"code":"10","typename":"东区-分段内外场"},
+	{"code":"10","typename":"西区-钢加内外场"},
+	{"code":"10","typename":"西区-分段内外场"},
+	{"code":"10","typename":"西区-钢板场"},
+	{"code":"10","typename":"西区-管加内外场"},
+	{"code":"10","typename":"西区-1#坞及总组场地"},
+	{"code":"10","typename":"西区-2#坞及总组场地"},
+	{"code":"10","typename":"西区-1#码头"}]
+})

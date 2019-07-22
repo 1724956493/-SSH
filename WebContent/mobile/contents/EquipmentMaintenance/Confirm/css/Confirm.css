@@ -1,0 +1,36 @@
+.key_province {
+	font-size: 17px;
+	position: absolute;
+	left: -11px;
+	top: 0px;
+	border: 1;
+	width: 28px;
+	text-align: center;
+	font-family: "ºÚÌå";
+}
+.fontblod{
+	font-weight: bolder;
+}
+#head_id {
+	background: white;
+	display: block;
+	text-align: center;
+}
+
+#id_province {
+	width: 100%;
+}
+
+.detail_H {
+	background: white;
+}
+.detail_H th {
+	text-indent: 1rem;
+	/*border: 1px solid red;*/
+	height: 3rem;
+	 font-size: 25px;
+}
+.detail_H td input {
+	height: 3rem;
+	font-size: 20px;
+}

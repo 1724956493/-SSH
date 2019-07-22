@@ -1,0 +1,35 @@
+2017-05-30 21:45:50,148 WARN  org.hibernate.internal.util.xml.DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-30 21:45:52,795 WARN  org.hibernate.dialect.Oracle9Dialect:70 - HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2017-05-30 21:45:52,795 WARN  org.hibernate.dialect.OracleDialect:56 - HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2017-05-30 21:45:53,357 WARN  org.hibernate.cfg.SettingsFactory:367 - Unrecognized value for "hibernate.hbm2ddl.auto": none
+2017-05-30 21:45:53,404 WARN  org.hibernate.id.UUIDHexGenerator:59 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2017-05-30 22:24:58,371 WARN  org.hibernate.internal.util.xml.DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-30 22:25:01,443 WARN  org.hibernate.dialect.Oracle9Dialect:70 - HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2017-05-30 22:25:01,446 WARN  org.hibernate.dialect.OracleDialect:56 - HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2017-05-30 22:25:01,846 WARN  org.hibernate.cfg.SettingsFactory:367 - Unrecognized value for "hibernate.hbm2ddl.auto": none
+2017-05-30 22:25:01,873 WARN  org.hibernate.id.UUIDHexGenerator:59 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2017-05-30 22:27:47,532 WARN  org.hibernate.internal.util.xml.DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-30 22:27:49,535 WARN  org.hibernate.dialect.Oracle9Dialect:70 - HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2017-05-30 22:27:49,535 WARN  org.hibernate.dialect.OracleDialect:56 - HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2017-05-30 22:27:50,004 WARN  org.hibernate.cfg.SettingsFactory:367 - Unrecognized value for "hibernate.hbm2ddl.auto": none
+2017-05-30 22:27:50,036 WARN  org.hibernate.id.UUIDHexGenerator:59 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2017-05-30 22:30:17,400 WARN  org.hibernate.internal.util.xml.DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-30 22:30:19,315 WARN  org.hibernate.dialect.Oracle9Dialect:70 - HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2017-05-30 22:30:19,315 WARN  org.hibernate.dialect.OracleDialect:56 - HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2017-05-30 22:30:19,690 WARN  org.hibernate.cfg.SettingsFactory:367 - Unrecognized value for "hibernate.hbm2ddl.auto": none
+2017-05-30 22:30:19,722 WARN  org.hibernate.id.UUIDHexGenerator:59 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2017-05-30 22:35:22,039 WARN  org.hibernate.internal.util.xml.DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-30 22:35:23,892 WARN  org.hibernate.dialect.Oracle9Dialect:70 - HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2017-05-30 22:35:23,892 WARN  org.hibernate.dialect.OracleDialect:56 - HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2017-05-30 22:35:24,287 WARN  org.hibernate.cfg.SettingsFactory:367 - Unrecognized value for "hibernate.hbm2ddl.auto": none
+2017-05-30 22:35:24,303 WARN  org.hibernate.id.UUIDHexGenerator:59 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2017-05-30 23:21:33,771 WARN  org.hibernate.internal.util.xml.DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-30 23:21:36,190 WARN  org.hibernate.dialect.Oracle9Dialect:70 - HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2017-05-30 23:21:36,205 WARN  org.hibernate.dialect.OracleDialect:56 - HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2017-05-30 23:21:36,580 WARN  org.hibernate.cfg.SettingsFactory:367 - Unrecognized value for "hibernate.hbm2ddl.auto": none
+2017-05-30 23:21:36,612 WARN  org.hibernate.id.UUIDHexGenerator:59 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2017-05-30 23:22:58,940 WARN  org.hibernate.internal.util.xml.DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-30 23:23:00,864 WARN  org.hibernate.dialect.Oracle9Dialect:70 - HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2017-05-30 23:23:00,865 WARN  org.hibernate.dialect.OracleDialect:56 - HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2017-05-30 23:23:01,336 WARN  org.hibernate.cfg.SettingsFactory:367 - Unrecognized value for "hibernate.hbm2ddl.auto": none
+2017-05-30 23:23:01,368 WARN  org.hibernate.id.UUIDHexGenerator:59 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <style>
+        .content-center {
+            text-align: center;
+        }
+    </style>
+
+    <body>
+        <header class="content-center">
+            <select id="select-main">       
+            </select>
+        </header>
+
+    </body>
+    <script>
+        var selectView = document.getElementById('select-main');
+        for (var i = 0; i < 10; i++) {
+            selectView[i] = new Option('name' + i, 'value' + i);
+        }
+    </script>
+
+</html>

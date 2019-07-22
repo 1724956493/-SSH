@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+      <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+    <!--    <property name="connection.url">jdbc:oracle:thin:@10.7.1.16:1521:orcl</property>
+        <property name="connection.username">nc58</property>
+        <property name="connection.password">nc58</property>  -->
+		<property name="connection.url">jdbc:oracle:thin:@10.7.1.16:1521:orcl</property>
+        <property name="connection.username">nc58</property>
+        <property name="connection.password">nc58</property>  
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.timeout">1800</property>
+        <property name="hibernate.c3p0.max_statements">100</property>
+        <property name="hibernate.c3p0.acquire_increment">2</property> 
+       
+
+        <!-- JDBC connection pool (use the built-in)
+        <property name="connection.pool_size">1</property> -->
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.OracleDialect</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">none</property>
+
+
+		<mapping class="com.nts.teststruts.model.BdCorp"/>
+		<mapping class="com.nts.teststruts.model.IcSapplyB"/>
+		<mapping class="com.nts.teststruts.model.IcSapplyH"/>
+		<mapping class="com.nts.teststruts.model.SmUser"/>
+		<mapping class="com.nts.teststruts.model.SmRole"/>
+		<mapping class="com.nts.teststruts.model.SmRoleCorpAlloc"/>
+		<mapping class="com.nts.teststruts.model.SmUserRole"/>
+		<mapping class="com.nts.teststruts.model.BdDefdoc"/>
+		<mapping class="com.nts.teststruts.model.BdJobbasfil"/>
+		<mapping class="com.nts.teststruts.model.BdDefdoclist"/>
+		<mapping class="com.nts.teststruts.model.BdDeptdoc"/>
+		<mapping class="com.nts.teststruts.model.PamEquip"/>
+		<mapping class="com.nts.teststruts.model.PamLocation"/>
+		<mapping class="com.nts.teststruts.model.SmUserandclerk"/>
+		<mapping class="com.nts.teststruts.model.BdPsndoc"/>
+		<mapping class="com.nts.teststruts.model.BdPsnbasdoc"/>
+		<mapping class="com.nts.teststruts.model.AdEquipck"/>
+		<mapping class="com.nts.teststruts.model.AdEquipckD"/>
+		<mapping class="com.nts.teststruts.model.AdEquipreck"/>
+		<mapping class="com.nts.teststruts.model.AdMenu"/>
+		<mapping class="com.nts.teststruts.model.AdRole"/>
+		<mapping class="com.nts.teststruts.model.AdRolemenu"/>
+		<mapping class="com.nts.teststruts.model.AdUserrole"/>
+		<mapping class="com.nts.teststruts.model.CollectReport"/>
+		<mapping class="com.nts.teststruts.model.HiPsndocGrpdef4"/>
+		<mapping class="com.nts.teststruts.model.AdPsndocRp"/>
+		<mapping class="com.nts.teststruts.model.HiPsndocGrpdef2"/>
+		<mapping class="com.nts.teststruts.model.AdPsndocscore"/>		
+		<mapping class="com.nts.teststruts.model.Employee"/>
+		<mapping class="com.nts.teststruts.model.AdLog"/>
+		<mapping class="com.nts.teststruts.model.AdPsntypelist"/>
+		<mapping class="com.nts.teststruts.model.AdWzlist"/>
+		<mapping class="com.nts.teststruts.model.AdWztype"/>
+		<mapping class="com.nts.teststruts.model.AdPsndocRp2"/>		
+		<mapping class="com.nts.teststruts.model.AdCarinfo"/>	
+		<mapping class="com.nts.teststruts.model.Adqualitybill"/>
+		<mapping class="com.nts.teststruts.model.AdqualitybillSub"/>	
+		<mapping class="com.nts.teststruts.model.AdEquipckCheckcontent"/>	
+    </session-factory>
+
+</hibernate-configuration>

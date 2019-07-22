@@ -1,0 +1,71 @@
+html,
+body {
+	height: 100%;
+	background: white;
+}
+
+.mui-content {
+	background: white;
+}
+
+.mui-input-row label {
+	width: 40%;
+}
+
+.mui-input-row label~input,
+.mui-input-row label~select,
+.mui-input-row label~textarea {
+	width: 60%;
+}
+
+.mui-btn {
+	padding: 5px 0;
+	border: 1px;
+}
+
+.mui-input-group {}
+
+.ishidden {
+	display: none;
+}
+
+#topPopover {
+	position: fixed;
+	top: 16px;
+	right: 6px;
+}
+
+#topPopover .mui-popover-arrow {
+	left: auto;
+	right: 6px;
+}
+
+.mui-popover {
+	height: 30%;
+	width: 60%;
+}
+
+.mui-table-view-cell a {
+	text-decoration: none;
+	color: black;
+}
+
+.mui-table-view-cell a span {
+	font-size: 1.2rem;
+}
+
+.upload_img {
+	margin-left: 1rem;
+}
+.ui-autocomplete {
+	max-height: 200px;
+	overflow-y: auto;
+	/* 閿熸枻鎷锋姘村钩閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷� */
+	overflow-x: hidden;
+}
+html .ui-autocomplete {
+	height: 100px;
+}
+.fontblod{
+	font-weight: bolder;
+}

@@ -1,0 +1,85 @@
+html,
+body {
+	height: 100%;
+	background: white;
+}
+
+.mui-content {
+	background: white;
+}
+
+.mui-input-row label {
+	width: 40%;
+}
+.fontblod{
+	font-weight: bolder;
+}
+.mui-input-row label~input,
+.mui-input-row label~select,
+.mui-input-row label~textarea {
+	width: 60%;
+}
+
+.mui-btn {
+	padding: 5px 0;
+	border: 1px;
+}
+
+.mui-input-group {}
+
+.ishidden {
+	display: none;
+}
+
+#topPopover {
+	position: fixed;
+	top: 16px;
+	right: 6px;
+}
+
+#topPopover .mui-popover-arrow {
+	left: auto;
+	right: 6px;
+}
+
+.mui-popover {
+	height: 30%;
+	width: 60%;
+}
+
+.mui-table-view-cell a {
+	text-decoration: none;
+	color: black;
+}
+
+.mui-table-view-cell a span {
+	font-size: 1.2rem;
+}
+
+.upload_img {
+	margin-left: 1rem;
+}
+.ui-autocomplete {
+	max-height: 200px;
+	overflow-y: auto;
+	/* 锟斤拷止水平锟斤拷锟斤拷锟斤拷 */
+	overflow-x: hidden;
+}
+/* IE 6 锟斤拷支锟斤拷 max-height
+   * 锟斤拷锟斤拷使锟斤拷 height 锟斤拷锟芥，锟斤拷锟斤拷锟斤拷锟角匡拷撇说锟斤拷锟斤拷锟斤拷锟绞疚拷歉锟斤拷叨锟�
+   */
+* html .ui-autocomplete {
+	height: 100px;
+}
+
+.detail_H th,
+	.detail_H td {
+		text-indent: 1rem;
+		/*border: 1px solid red;*/
+		height: 3rem;
+		border-bottom: 1px solid gray;
+	}
+	
+	.detail_H table {
+		background: pink;
+	}

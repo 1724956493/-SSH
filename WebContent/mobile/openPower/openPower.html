@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="css/mui.min.css" rel="stylesheet" />
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"
+	charset="utf-8"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css" />
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/xlsx/0.11.13/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource"></script>
+</head>
+
+<body>
+
+	<div class="mui-content">
+
+		<div class="mui-input-group">
+
+			<div class="mui-input-row">
+
+				<input type="file" id="xFile"
+					style="position:absolute;clip:rect(0 0 0 0);"
+					@change="getFile($event)"> <label for="xFile"><span
+					style="border: 1px solid black;">导入文件</span></label> <input id="workerCode"
+					name="baseInfo" type="text" class="mui-input-clear"
+					v-model="loadPath">
+			</div>
+
+			<div class="mui-input-row">
+				<label>选择权限:</label> <select name="select" id="choice"
+					@change="indexSelect($event)">
+					<option v-for="(item,index) in rolePowers" v-bind:value="index"> {{item.rolename}}</option>
+				</select>
+			</div>
+			<table class='table table-bordered table-hover'>
+				<caption class="h3 text-info text-center">给一下帐号赋权限,共{{count}}个人</caption>
+				<tr>
+					<th class="text-center">帐号</th>
+					<th class="text-center">姓名</th>
+				</tr>
+				<tr v-for="(value,index) in getUserInfor">
+					<td class="text-center">{{value.用户名}}</td>
+					<td class="text-center">{{value.姓名}}</td>
+				</tr>
+			</table>
+			<button @click="submit()" class="mui-btn mui-btn-block "
+				type="button">提交</button>
+
+		</div>
+
+	</div>
+	<div id="demo"></div>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">mui.init()
+		var vue = new Vue({
+			el : '.mui-content', //元素选择器
+			data : {
+				loadPath : "",
+				rolePowers : [],
+				getUserInfor : "",
+				count : 0,
+				getSelectRoleID : ""
+			},
+			mounted : function() {
+				var url = this.getRealPath() + "/json/user_roletoJson";
+				this.$http.get(url).then(function(res) {
+					this.rolePowers = res.data;
+					this.getSelectRoleID = this.rolePowers[0].uuidRole;
+				}, function(res) {});
+			},
+			methods : {
+				getRealPath : function() {
+					//获取当前网址，如： http://localhost:8083/myproj/view/my.jsp
+					var curWwwPath = window.document.location.href;
+					//获取主机地址之后的目录，如： myproj/view/my.jsp
+					var pathName = window.document.location.pathname;
+					var pos = curWwwPath.indexOf(pathName);
+					//获取主机地址，如： http://localhost:8083
+					var localhostPaht = curWwwPath.substring(0, pos);
+					//获取带"/"的项目名，如：/myproj
+					var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+	
+					//得到了 http://localhost:8083/myproj
+					var realPath = localhostPaht + projectName;
+					return realPath;
+				},
+				getFile : function(e) {
+					document.getElementById("demo").innerHTML = "";
+					var wb;
+					var interDate = this;
+					var getFileName = e.target.files[0].name;
+					if (!e.target.files) {
+						return;
+					}
+					if (getFileName.indexOf(".xlsx") == -1) {
+						document.getElementById("demo").innerHTML = "文件格式错误,请导入XLSX文件";
+						return;
+					}
+					var f = e.target.files[0];
+					this.loadPath = getFileName;
+					var reader = new FileReader();
+					reader.onload = function(e) {
+						var data = e.target.result;
+						wb = XLSX.read(data, {
+							type : 'binary'
+						});
+						//wb.SheetNames[0]是获取Sheets中第一个Sheet的名字
+						//wb.Sheets[Sheet名]获取第一个Sheet的数据.
+	
+						interDate.getUserInfor = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
+						interDate.count = interDate.getUserInfor.length;
+					};
+					reader.readAsBinaryString(f);
+	
+				},
+				indexSelect : function(e) {
+					//alert(e.target.value); //在这里可以正确输出每个下拉框对应的下标值，当然输出值都是可以的
+					this.getSelectRoleID = this.rolePowers[e.target.value].uuidRole;
+				},
+				submit : function() {
+					var userDate = this.getUserInfor;
+					var roleID = this.getSelectRoleID;
+					if (userDate.length == 0) {
+						mui.alert("没有帐号数据，请重新导入");
+						return;
+					}
+	
+					var url = this.getRealPath() + "/json/querybonuse_addUserRole";
+					this.$http.post(url, {
+						roleID : roleID,
+						userDate : JSON.stringify(userDate)
+					}, {
+						emulateJSON : true
+					}).then(function(data) {
+						if (data.body.success) {
+							mui.alert("权限开通成功!", '提示', function() {
+								window.location.reload();
+							});
+						} else {
+							mui.alert("权限开通失败");
+						}
+					}, function(err) {});
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

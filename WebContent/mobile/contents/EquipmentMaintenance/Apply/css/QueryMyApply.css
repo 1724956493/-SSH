@@ -1,0 +1,22 @@
+html,
+body {
+	height: 100%;
+	background: #F6FBFF;
+}
+
+.mui-content {
+	background:#F6FBFF;
+}
+table{
+	width: 100%;
+	border-collapse:separate; 
+	border-spacing:0px 2px;
+}
+.fistCol {
+				
+				width: 30%;
+			}
+.secendCol {
+				text-align: right;
+				width: 10%;
+			}
